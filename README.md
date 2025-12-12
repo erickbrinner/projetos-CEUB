@@ -20,9 +20,70 @@ Aqui está o detalhamento do projeto de gerenciamento hoteleiro:
 | **Classes Implementadas** | `Pessoa`, `Funcionario`, `Hospede`, `Hotel`, `Quarto`, `Reserva`. |
 | **Ponto Principal** | Implementação das relações *um-para-muitos* e *muitos-para-muitos* definidas no Diagrama UML. |
 
-#### 📊 Arquitetura do Sistema
 
-A solução foi desenvolvida seguindo rigorosamente o diagrama de classes UML abaixo. Ele define a estrutura das classes, seus atributos e os métodos, garantindo a aplicação correta dos conceitos de POO.
+#### 📊 Arquitetura do Sistema (Diagrama de Classes UML)
+
+A solução foi desenvolvida seguindo rigorosamente a arquitetura abaixo, construída para demonstrar a aplicação de herança e composição.
+
+```mermaid
+classDiagram
+    direction LR
+
+    class Pessoa{
+        -int _id
+        -str _nome
+        -str _e_mail
+        +get_id()
+        +get_nome()
+        +get_email()
+    }
+    class Funcionario{
+        +add_quarto(hotel, quarto)
+        +remover_quarto(hotel, quarto)
+        +registrar_hospede(hotel, hospede)
+        +cancelar_reserva(hotel, reserva)
+    }
+    class Hospede{
+        -list _reservas
+        +fazer_reserva(reserva)
+        +cancelar_reserva(reserva)
+        +consultar_reservas()
+    }
+    class Hotel{
+        -list _quartos
+        -list _hospedes
+        -list _reservas
+        +add_quarto(quarto)
+        +remover_quarto(quarto)
+        +registrar_hospede(hospede)
+        +cancelar_reserva(reserva)
+    }
+    class Quarto{
+        -int _numero
+        -str _tipo
+        -bool _disponivel
+        +reservar()
+        +liberar()
+        +estaDisponivel()
+    }
+    class Reserva{
+        -Hospede _hospede
+        -Quarto _quarto
+    }
+
+    Pessoa <|-- Funcionario
+    Pessoa <|-- Hospede
+
+    Funcionario --> Hotel : gerencia
+    Hospede --> Hotel : utiliza
+
+    Hotel "1" *-- "*" Quarto : possui
+    Hotel "1" *-- "*" Reserva : gerencia
+
+    Reserva --> Hospede : feita_por
+    Reserva --> Quarto : aloca
+
+    Funcionario --> Quarto : opera.
 
 
 
