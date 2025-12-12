@@ -15,6 +15,7 @@ O objetivo é centralizar o código, as soluções e as aplicações práticas d
 | **Conceitos Aplicados** | **Herança**, **Encapsulamento**, **Composição** e Estruturas de Dados. |
 | **Classes Implementadas** | `Pessoa`, `Funcionario`, `Hospede`, `Hotel`, `Quarto`, `Reserva`. |
 | **Ponto Principal** | Implementação das relações definidas no Diagrama UML. |
+| **Tecnologias Utilizadas** | ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=python&logoColor=white) ![VSCode](https://img.shields.io/badge/VS%20Code-007ACC.svg?style=flat&logo=visual%20studio%20code&logoColor=white) |
 
 #### 📊 Arquitetura do Sistema
 
