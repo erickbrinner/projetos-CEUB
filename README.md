@@ -37,22 +37,4 @@ O projeto principal que instancia as classes e aciona o fluxo de trabalho do hot
     python main.py
     ```
 
----
-
-## 📝 Outros Projetos Acadêmicos
-
-*[Esta seção pode ser expandida conforme você adiciona mais projetos ao repositório.]*
-
-### ⚙️ Projeto de Estruturas de Dados (Exemplo)
-* **Disciplina:** Estruturas de Dados
-* **Descrição:** Implementação de uma árvore binária de busca (BST) balanceada, com operações de inserção, remoção e travessia.
-* **Tecnologias:** Python
-
-### 🌐 Aplicação Web Básica (Exemplo)
-* **Disciplina:** Desenvolvimento Web
-* **Descrição:** CRUD (Create, Read, Update, Delete) simples utilizando [Framework, ex: Flask].
-* **Tecnologias:** Python, HTML, CSS, [Banco de Dados]
-
----
-
 
