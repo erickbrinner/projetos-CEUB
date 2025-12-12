@@ -1,58 +1,62 @@
-# Projetos CEUB
-# 🏨 Sistema Hotel - Gerenciamento de Reservas
+# 🎓 Repositório de Projetos Acadêmicos
 
-## 🌟 Visão Geral do Projeto
+Este repositório contém os projetos e trabalhos desenvolvidos durante a graduação em Análise e Desenvolvimento de Sistemas.
 
-Este projeto foi desenvolvido como parte da sistematização da matéria de **Programação Orientada a Objetos (POO)**. O objetivo principal foi criar uma solução robusta e modular para atender às necessidades de uma empresa do ramo hoteleiro, focada no **gerenciamento eficiente de reservas de quartos**.
+O objetivo é centralizar o código, as soluções e as aplicações práticas dos conceitos aprendidos em diversas disciplinas.
 
-A solução foi concebida e implementada seguindo rigorosamente os princípios de POO, utilizando herança, encapsulamento e composição para garantir um código limpo, manutenível e escalável.
+---
 
-## 📐 Diagrama UML do Projeto
+## 📚 Projetos da Disciplina: Programação Orientada a Objetos (POO)
 
-A arquitetura da solução foi definida com base no seguinte Diagrama de Classes UML, que estabelece as entidades, seus atributos, métodos e os relacionamentos entre elas:
+Aqui está o detalhamento do projeto de gerenciamento hoteleiro:
+
+### 🏨 Sistema Hotel - Gerenciamento de Reservas
+
+| Detalhe | Informação |
+| :--- | :--- |
+| **Disciplina** | Programação Orientada a Objetos (POO) |
+| **Objetivo** | Desenvolver um sistema para gerenciamento de reservas de quartos, simulando a operação de uma empresa hoteleira. |
+| **Conceitos Aplicados** | **Herança** (`Pessoa` -> `Funcionario`, `Hospede`), **Encapsulamento**, **Composição** e Estruturas de Dados. |
+| **Classes Implementadas** | `Pessoa`, `Funcionario`, `Hospede`, `Hotel`, `Quarto`, `Reserva`. |
+| **Ponto Principal** | Implementação das relações *um-para-muitos* e *muitos-para-muitos* definidas no Diagrama UML. |
+
+#### 📊 Arquitetura do Sistema
+
+A solução foi desenvolvida seguindo rigorosamente o diagrama de classes UML abaixo. Ele define a estrutura das classes, seus atributos e os métodos, garantindo a aplicação correta dos conceitos de POO.
 
 
-## 🚀 Tecnologias e Conceitos de POO Aplicados
 
-O projeto foi desenvolvido em Python, aplicando os seguintes pilares da Programação Orientada a Objetos:
+#### 💻 Como Executar
 
-### 1. Herança (Inheritance)
+O projeto principal que instancia as classes e aciona o fluxo de trabalho do hotel (criação de quartos, registro de hóspedes, realização de reservas, etc.) está no arquivo `main.py`.
 
-* A classe base **`Pessoa`** (abstrata, idealmente) serve como superclasse para **`Funcionario`** e **`Hospede`**.
-* **Vantagem:** Reutilização de código, garantindo que atributos comuns como `_id`, `_nome` e `_e_mail` sejam definidos uma única vez.
+1.  Clone este repositório.
+2.  Navegue até o diretório do projeto (`/sistema_hotel/`).
+3.  Execute o arquivo principal:
+    ```bash
+    python main.py
+    ```
 
-### 2. Encapsulamento (Encapsulation)
-* Todos os atributos críticos (ex: `_id`, `_numero`, `_reservas`) são protegidos ou privados (indicados pelo *leading underscore* `_`).
-* O acesso e a modificação desses dados internos são controlados por métodos públicos (Getters e Setters, como `get_id()` e `get_nome()`), garantindo a integridade do estado do objeto.
+---
 
-### 3. Composição (Composition/Aggregation)
-* A classe **`Hotel`** mantém coleções de objetos de outras classes (**`Quarto`**, **`Hospede`** e **`Reserva`**), utilizando estruturas de dados.
-* **`Reserva`** é composta por um objeto **`Hospede`** e um objeto **`Quarto`**, definindo o vínculo essencial de uma reserva.
+## 📝 Outros Projetos Acadêmicos
 
-### 4. Estruturas de Dados
-* Arrays ou Listas (`[]` no diagrama) são utilizadas dentro das classes **`Hotel`** (`_quartos`, `_hospedes`, `_reservas`) e **`Hospede`** (`_reservas`) para gerenciar coleções de objetos de forma eficiente.
+*[Esta seção pode ser expandida conforme você adiciona mais projetos ao repositório.]*
 
-## 🧩 Classes Implementadas
+### ⚙️ Projeto de Estruturas de Dados (Exemplo)
+* **Disciplina:** Estruturas de Dados
+* **Descrição:** Implementação de uma árvore binária de busca (BST) balanceada, com operações de inserção, remoção e travessia.
+* **Tecnologias:** Python
 
-As seguintes classes foram implementadas para modelar o domínio hoteleiro:
+### 🌐 Aplicação Web Básica (Exemplo)
+* **Disciplina:** Desenvolvimento Web
+* **Descrição:** CRUD (Create, Read, Update, Delete) simples utilizando [Framework, ex: Flask].
+* **Tecnologias:** Python, HTML, CSS, [Banco de Dados]
 
-| Classe | Descrição | Atributos Chave | Métodos Principais |
-| :--- | :--- | :--- | :--- |
-| **Pessoa** | Classe base para indivíduos. | `_id`, `_nome`, `_e_mail` | `get_id()`, `get_nome()` |
-| **Funcionario** | Representa um funcionário do hotel. | (Herda de Pessoa) | `add_quarto()`, `registrar_hospede()` |
-| **Hospede** | Representa um cliente com histórico de reservas. | `_reservas: []` | `fazer_reserva()`, `cancelar_reserva()` |
-| **Quarto** | Representa uma unidade de acomodação. | `_numero`, `_tipo`, `_disponivel: bool` | `reservar()`, `liberar()`, `estaDisponivel()` |
-| **Reserva** | Detalhes de uma reserva específica. | `_hospede: Hospede`, `_quarto: Quarto` | (Classe de dados de relacionamento) |
-| **Hotel** | Classe principal de gerenciamento. | `_quartos: []`, `_hospedes: []`, `_reservas: []` | `add_quarto()`, `registrar_hospede()`, `cancelar_reserva()` |
+---
 
-## ⚙️ Execução do Projeto
+## 🔗 Contato
 
-O projeto pode ser executado através do arquivo principal:
-
-1.  **Instanciação:** O arquivo `main.py` é responsável por instanciar as classes (`Hotel`, `Funcionario`, `Hospede`, `Quarto`).
-2.  **Ação dos Métodos:** Em seguida, `main.py` aciona os métodos da aplicação para simular o fluxo de trabalho diário de um hotel:
-    * Adicionar quartos.
-    * Registrar um hóspede.
-    * Fazer uma nova reserva.
-    * Consultar a disponibilidade do quarto.
+* **GitHub:** [@SeuUsuario](https://github.com/SeuUsuario)
+* **Email:** seu.email@exemplo.com
     * Cancelar uma reserva.
