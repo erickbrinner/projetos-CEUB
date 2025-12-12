@@ -55,8 +55,4 @@ O projeto principal que instancia as classes e aciona o fluxo de trabalho do hot
 
 ---
 
-## 🔗 Contato
 
-* **GitHub:** [@SeuUsuario](https://github.com/SeuUsuario)
-* **Email:** seu.email@exemplo.com
-    * Cancelar uma reserva.
